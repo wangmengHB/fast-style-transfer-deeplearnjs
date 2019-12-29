@@ -125,7 +125,7 @@ export class StyleTransferDemo extends StyleTransferDemoPolymer {
       const fileReader: FileReader = new FileReader();
       fileReader.onload = ((e) => {
         const target: FileReader = e.target as FileReader;
-        this.contentImgElement.src = target.result;
+        this.contentImgElement.src = target.result as string;
       });
       fileReader.readAsDataURL(f);
       this.fileSelect.value = '';
